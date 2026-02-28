@@ -1,4 +1,5 @@
-﻿using ModelContextProtocol.Protocol;
+﻿using IDK.Configuration;
+using ModelContextProtocol.Protocol;
 using ModelContextProtocol.Server;
 
 namespace IDK.Tools;
@@ -13,13 +14,9 @@ public class ToolDefinitionProvider : IToolDefinitionProvider
 {
     private readonly McpServerPrimitiveCollection<McpServerTool> tools;
 
-    public ToolDefinitionProvider(IEnumerable<McpServerTool> tools)
+    public ToolDefinitionProvider(IDKMcpOptions options)
     {
-        this.tools = new McpServerPrimitiveCollection<McpServerTool>();
-        foreach (var item in tools)
-        {
-            this.tools.Add(item);
-        }
+        this.tools = options.Tools ?? new();
     }
 
     public async ValueTask<CallToolResult> ExecuteToolAsync(RequestContext<CallToolRequestParams> context, CancellationToken cancellationToken = default)
