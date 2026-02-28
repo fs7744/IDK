@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddIDKMcp(c =>
 {
 
-}).McpServerBuilder.WithTools<ClockTool>().WithResources<VersionResource>();
+}).McpServerBuilder.WithTools<ClockTool>().WithResources<VersionResource>().WithPrompts<TestPrompt>();
 
 var app = builder.Build();
 
