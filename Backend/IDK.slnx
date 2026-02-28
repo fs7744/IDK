@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/IDK.Server/IDK.Server.csproj" Id="d2d9c0a3-5bd0-4d06-8e0a-ee6b296a495d" />
+    <Project Path="src/IDK/IDK.csproj" Id="cdfea7a4-818b-463e-ab11-c392a54ec3fa" />
+  </Folder>
+  <Folder Name="/test/" />
+</Solution>

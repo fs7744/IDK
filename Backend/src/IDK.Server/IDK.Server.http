@@ -1,0 +1,6 @@
+@IDK.Server_HostAddress = http://localhost:5032
+
+GET {{IDK.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
